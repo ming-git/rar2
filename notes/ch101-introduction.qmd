@@ -1,0 +1,143 @@
+Advanced R, 2nd, by Hadley Wickham
+1. Introduction
+
+In the process, I hope to show that, despite its sometimes frustrating quirks, R is, at its heart, an elegant and beautiful language, well tailored for data science.
+
+15years/5years
+
+understand the intricacies of R as quickly and painlessly as possible
+
+## 1.1 Why R?
+- open source: free,cross-platform
+
+- robust community, online and in person:  the [#rstats twitter community](https://twitter.com/search?q=%23rstats) ,[rweekly](https://rweekly.org/) ,[R-Ladies](http://r-ladies.org/)
+
+- massive packages:  for statistical modelling, machine learning, visualisation, and importing and manipulating data
+
+- Powerful communicating tools: RMarkdonw, Shiny(interactive apps without any knowledge of HTML or javascript), Quarto
+
+- tailored IDE: RStudio
+
+- Cutting edge Tools: immediate access to the very latest statistical techniques and implementations. 最新的统计研究和机器学习论文通常都会发布一个r包。
+
+- Deep-seated lanuage support:missing values, data frames, and vectorisation.
+
+- A strong foundation of functional programming: R language is functional at heart
+
+- Professional Support: Rstudio Company
+
+- Powerful metaprogramming facilities
+
+- The ease with which R can connect to high-performance programming languages like C, Fortran, and C++.
+
+###  R is not perfect
+他专注于解决具体的问题，并不局限于在理论上的完美.
+而最大的挑战就是它的最大的用户并不是程序员，他们是真正的用户。
+而就是为这些人而开发的。
+
+-  in haste to solve a pressing problem. As a result, code is not very elegant, fast, or easy to understand. Most users do not revise their code to address these shortcomings. 为解决问题而投入，并不专注于完美
+
+- the R community is more focussed on results than processes. Knowledge of software engineering best practices is patchy. For example, not enough R programmers use source code control or automated testing.专注于结果而非过程，所以缺乏编程的最佳实践，也很少使用源代码控制和自动测试技术
+
+- Metaprogramming is a double-edged sword. Too many R functions use tricks to reduce the amount of typing at the cost of making code that is hard to understand and that can fail in unexpected ways.，元编程技术是一把双刃剑，太多的R函数专注于减少代码输入量，从而导致代码的难以理解和不可预料的失败
+
+- Inconsistency is rife across contributed packages, and even within base R. You are confronted with over 25 years of evolution every time you use R, and this can make learning R tough because there are so many special cases to remember.历史包袱: 不一致性在贡献的软件包中普遍存在，甚至在基本的R语言中也是如此。每次使用R语言时，你都会面对超过25年的发展历程，这可能会使学习R语言变得困难，因为有太多特例需要记住。
+
+- R is not a particularly fast programming language, and poorly written R code can be terribly slow. R is also a profligate user of memory.并非为快而生,很容易写出低效代码.
+
+## 1.2 Who should read this book
+This book is aimed at two complementary audiences:
+
+Intermediate R programmers who want to dive deeper into R, understand how the language works, and learn new strategies for solving diverse problems.
+
+Programmers from other languages who are learning R and want to understand why R works the way it does.
+
+要求:
+- to have written a decent amount of code
+-  be familiar with the basics of data analysis (i.e. data import, manipulation, and visualisation)
+- written a number of functions
+- be familiar with the installation and use of CRAN packages.
+
+## 1.3 What you will get out of this book
+- the foundations of R: 
+    1. understand complex data types and the best ways to perform operations on them
+    2. have a deep understanding of how functions work
+    3. know what environments are
+    4. how to make use of the condition system.
+    
+- functional programming
+    1. 
+    
+- OOP
+    1. S3
+    2. S4
+    3. R6
+    
+- metaprogramming
+    1. tidy evaluation
+    
+- memory usage
+    - fast c++ equivalents
+    
+## 1.4 What you will not learn
+- not on the data analysis tool, you can see:
+    1.  [tidyverse](https://www.tidyverse.org/)
+    2. [R for Data Science](http://r4ds.had.co.nz/)
+
+- not on buildup packages, you can see:
+    1. [devtools](http://devtools.r-lib.org/),
+    2. [roxygen2](http://klutometis.github.io/roxygen/), 
+    3. [testthat](http://testthat.r-lib.org/)
+    4. [usethis](http://usethis.r-lib.org/)
+    5. [R Packages](http://r-pkgs.had.co.nz/)
+    2. [R packages](http://r-pkgs.had.co.nz/)
+    
+## 1.5 Meta-techniques
+two meta-techniques that are tremendously helpful for improving your skills as an R programmer: 
+- reading source code(多读源代码)
+- adopting a scientific mindset(采取科学思维) - develop a hypothesis, design some experiments, run them, and record the results. 
+
+## 1.6 Recommended reading
+Because the R community mostly consists of data scientists, not computer scientists, there are relatively few books that go deep in the technical underpinnings of R
+数据科学家和计算机科学家的不同之处
+他山之石，可以攻玉，通过阅读其他的数据，你可以更深入的了解R语言
+
+to use resources from other programming languages. R has aspects of both functional and object-oriented (OO) programming languages. Learning how these concepts are expressed in R will help you leverage your existing knowledge of other programming languages, and will help you identify areas where you can improve.
+
+### [Structure and Interpretation of Computer Programs45 (SICP)](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html)
+
+It’s a concise but deep book, and after reading it, I felt for the first time that I could actually design my own object-oriented system. The book was my first introduction to the encapsulated paradigm of object-oriented programming found in R, and it helped me understand the strengths and weaknesses of this system. SICP also teaches the functional mindset where you create functions that are simple individually, and which become powerful when composed together.
+
+### [Concepts, Techniques and Models of Computer Programming]()
+
+### [The Pragmatic Programmer]()
+
+
+## 1.7 Getting help
+- [RStudio Community](https://community.rstudio.com/), 
+- [StackOverflow](http://stackoverflow.com/) 
+- [R-help mailing list](https://stat.ethz.ch/mailman/listinfo/r-help)
+- **[Advanced-R Solution](https://advanced-r-solutions.rbind.io/)**
+
+### how to ask
+ - have the latest version of R and of the package (or packages) 
+ - creating a reproducible example, or reprex
+ -
+ 
+## 1.8 Acknowledgments/致谢
+
+## 1.9 Conventions/约定
+1. f() to refer to functions, 
+2. g to refer to variables and function parameters
+3. h/ to paths.
+4. Output is commented (#>)
+5. made reproducible by set.seed(1014)
+
+## 1.10 Colophon/声明
+- [commit by travis-ci](https://travis-ci.org/)
+- [source code](https://github.com/hadley/adv-r)
+- [printed book code](http://levien.com/type/myfonts/inconsolata.html)
+- [Twitter Emoji](https://github.com/twitter/twemoji)
+
+This version of the book was built with R version 4.0.4 (2021-02-15)
+纸版第2版是基于R3.5.2(2018-12-20)

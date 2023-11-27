@@ -1,0 +1,16 @@
+Advanced R, 2nd, by Hadley Wickham
+
+2023-11-23 07:25 creat all the toc file
+
+## Revison
+[adv-r2](https://adv-r.hadley.nz/index.html)
+[adv-r1](http://adv-r.had.co.nz/)
+
+## Other Books
+You may also be interested in:
+
+**Advanced R Solutions** by Malte Grosser and Henning Bumann, provides worked solutions to the exercises in this book.
+
+**R for Data Science** which introduces you to R as a tool for doing data science, focussing on a consistent set of packages known as the tidyverse.
+
+**R Packages** which teaches you how to make the most of R’s fantastic package system.

@@ -1,0 +1,75 @@
+Advanced R, 2nd, by Hadley Wickham
+
+
+## update - general
+- **new/important**: add new concept
+- **useful/practical**: delete non-usefuel subject, feel interesting but not usefule 。*这个观点尤其重要，就是作者觉得有些很重要很感兴趣的东西，可能对于大众而言可能并没有那么实用，并没有那么有用，所以如何平衡一下个人的兴趣和读者的兴趣是一个非常微妙和重要的话题。*
+- **easier/cleaner/colorful**: more interactive text, 100+ new figure
+- **package/framework**: new package used, rlang(http://rlang.r-lib.org) -  rlang, which provides a clean interface to low-level data structures and operations. in rev1(http://adv-r.had.co.cz), the base package used.
+- **foundation/understanding**: after rev1, R base is not changed, but my understanding is changed.
+
+## Revision on Chapter
+**数据科学家务实的思维，而非计算机科学家的理论讨论**
+The framework of book is not changed, but more changed can be found in every chapter.
+
+### 第一部分
+- chapter 01: 
+
+- chapter 02: objects and names of objects, 全新的一章，对象和对象名字的区别、何时复制数据、理解函数式编程的基础
+
+- chapter 03: 数据结构已被改写，侧重于向量类型(integers, factors, and data frames);  、体现了作者对于向量数据的理解。 important S3 vectors (like dates and date-times), data frame variation - tibble的引入; generally reflects my improved understanding of vector data types.
+
+- chapter 04: [[]],[]的区分-[ extracts many values and [[ extracts a single value (previously they were characterised by whether they “simplified” or “preserved”);how [[ works with lists; 新函数的引入
+
+- chapter 05: all-new-one chapter, 被遗忘的重要工具,if, for
+
+- chapter 06: 顺序的改进，%>% - 函数编写的第三种方式-the pipe (%>%) as a third way to compose functions；改善了函数形式的覆盖范围。
+
+- chapter 07: 对特殊环境(special environments)进行了重新组织,并对调动堆栈(call stack)的讨论进行了改进.
+
+- chapter 08: 包含了第1版的一场调试(Exceptions and debugging)中的内容。以及有关条件系统如何工作(how R’s condition system works)的许多新内容，该章还介绍如何创建自定义调节类(how to create your own custom condition classes)。
+
+**接下来的章节围绕r编程中三个最重要的编程范例  - 函数式编程、面向对象编程和元编程进行了重新组织。**
+the three most important programming paradigms in R: functional programming, object-oriented programming, and metaprogramming.
+
+### 第二部部分
+现在将函数式编程更清晰的分为三种主要技术，泛函(Functionals)，函数工厂(Function factories)和函数运算符(Function operators)，减少了一部分纯理论内容。
+
+`purrr`添加包 - to focus more on the underlying ideas and less on the incidental details
+
+### 第三部分 面向对象编程(OOP)
+- 基础类型、S3、R6、S4
+- 系统之间的权衡(the tradeoffs between the systems).
+- **重点介绍了不同对象系统的工作方式，而不是如何有效的使用它们**
+- 有效使用OOP，需要一本完整的书来专门学习,请问有这样的一本书吗?
+
+### 第四部分 元编程(previously called “computing on the language”) 
+ - 在第1版中称为语言计算，描述用可使用代码生成代码的工具套件(describes the suite of tools that you can use to generate code with code.)
+ - 所以在第2版中得到了很大的扩展
+ - 集中体现在tidy计算上 - 这是一套是元编程安全有原则，并且可供更多r程序员使用的思想和理论.(focusses on “tidy evaluation”, a set of ideas and theory that make metaprogramming safe, well-principled, and accessible to many more R programmers.)
+ - 第17章-Big picture-粗略的阐述了各部分如何组合在一起
+ - 第18章-Expressions-描述底层的数据结构
+ - 第19章-Quasiquotation-涵盖引用和取消引用
+ - 第20章-Evaluation-介绍在特定环境中对代码的求值
+ - 第21章-Translations-将所有主题融合在一起，以展示如何从一种编程语言转化为另一种编程语言
+ 
+### 第5部分 高级技术
+- 汇编了一些编程技术与性能分析，新的衡量和改进以及rcpp(programming techniques: profiling, measuring and improving performance, and Rcpp)
+- 与第1版极为类似，组织有所不同。
+- 使用了较新的添加包microbenchmark -> bench; lineprof -> profvis)
+
+## 被删除的内容
+
+理解这一章可能尤其重要，它可以帮助你理解迩的发展变化，以及人们随之而带来的理解的不同
+
+- 词汇这一章被删除(a bit of an odd duck)，也许词汇表是一种更好的表达
+- 样式这一章已替换为[在线样式指南](http://style.tidyverse.org)。样式指南与许多新的styler添加包配对使用，该添加包可以自动应用许多规则。
+- C语言这一章已经移动到https://github.com/hadley/r-internals
+- 内存这一章已经删除，许多材料集成到第2章。其余的这被认为技术性太强，理解起来并不那么重要.
+- 删除了有关R语言的性能这一章，这一章几乎没有提供可行的见解，并且随着r的变化已过时。
+
+## log
+2023-11-24 06:40 start
+2023-11-24 07:30 closed
+2023-11-26 07:50 review again with online version.
+
